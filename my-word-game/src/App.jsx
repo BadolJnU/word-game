@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../src/Pages/Home/Home";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/SignUp/SignUp";
+import Game from "./Pages/Game/Game";
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/results" element={<>Results</>} />
         
         {/* Catch-all route: if the user types a wrong URL, send them to login */}
         <Route path="*" element={<Navigate to="/login" />} />
